@@ -1,2 +1,4 @@
 node_modules
-references
+# references
+logger.js
+person.js
