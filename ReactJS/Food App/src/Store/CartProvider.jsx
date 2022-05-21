@@ -1,5 +1,5 @@
 import React from "react";
-import CartContext from "./cart-contest";
+import CartContext from "./cart-context";
 
 const CartProvider = (props) => {
   const addItemToCartHandler = (item) => {};
@@ -10,9 +10,7 @@ const CartProvider = (props) => {
     addItem: addItemToCartHandler,
     removeItem: removeItemFromCartHandler,
   };
-  return <CartContext.Provider>{props.children}
-  
-  </CartContext.Provider>;
+  return <CartContext.Provider value={cartContext} >{props.children}</CartContext.Provider>;
 };
 
 export default CartProvider;
